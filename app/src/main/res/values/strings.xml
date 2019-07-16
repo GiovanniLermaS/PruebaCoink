@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PruebaCoink</string>
+    <string name="whatAreYourDetails">¿Cuáles son tus datos?</string>
+    <string name="needKnowYourDetails">Ahora necesitamos saber algunos datos tuyos</string>
+</resources>
