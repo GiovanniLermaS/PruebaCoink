@@ -2,4 +2,20 @@
     <string name="app_name">PruebaCoink</string>
     <string name="whatAreYourDetails">¿Cuáles son tus datos?</string>
     <string name="needKnowYourDetails">Ahora necesitamos saber algunos datos tuyos</string>
+    <string name="documentNumber">Número de documento</string>
+    <string name="cardCitizenship">Cédula de ciudadanía</string>
+    <string name="issueDocument">Fecha de expedición del documento</string>
+    <string name="bornDate">Fecha de nacimiento</string>
+    <string name="next">Continuar</string>
+    <string name="dd">DD</string>
+    <string name="mm">MM</string>
+    <string name="aaaa">AAAA</string>
+    <string name="requiredField">Este campo es requerido</string>
+    <string name="key">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJBcGlLZXkiOiI0NDEyNTIiLCJWZXJzaW9uIjoiMS4wLjAifQ.OHyAIQwymM8QKo0ETrP8QIpneMEvJncMdgb3YCBbPTY</string>
+    <string name="userNotExist">El usuario no existe</string>
+    <string name="name">Nombre</string>
+    <string name="lastName">Apellidos</string>
+    <string name="gender">Género</string>
+    <string name="datesWrongType">Datos mal escritos</string>
+
 </resources>

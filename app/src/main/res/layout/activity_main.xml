@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRegister"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -26,8 +27,9 @@
         android:text="@string/whatAreYourDetails"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivLogo"
         app:layout_constraintTop_toTopOf="@+id/ivLogo" />
 
@@ -39,9 +41,251 @@
         android:layout_marginTop="20dp"
         android:text="@string/needKnowYourDetails"
         android:textColor="@android:color/darker_gray"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivLogo"
         app:layout_constraintTop_toBottomOf="@+id/tvYourDetails" />
+
+    <Spinner
+        android:id="@+id/spDocumentType"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tILDocumentNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spDocumentType">
+
+        <EditText
+            android:id="@+id/etDocumentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/documentNumber"
+            android:inputType="number"
+            android:theme="@style/EditText" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/issueDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/issueDocument"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tILDocumentNumber" />
+
+    <EditText
+        android:id="@+id/etRectangle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:hint="@string/dd"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issueDocument" />
+
+    <ImageView
+        android:id="@+id/ivLine1"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/etRectangle1"
+        app:layout_constraintStart_toEndOf="@+id/etRectangle1"
+        app:layout_constraintTop_toTopOf="@+id/etRectangle1" />
+
+    <EditText
+        android:id="@+id/etRectangle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:hint="@string/mm"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/ivLine1"
+        app:layout_constraintTop_toBottomOf="@+id/issueDocument" />
+
+    <ImageView
+        android:id="@+id/ivLine2"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/etRectangle2"
+        app:layout_constraintStart_toEndOf="@+id/etRectangle2"
+        app:layout_constraintTop_toTopOf="@+id/etRectangle2" />
+
+    <EditText
+        android:id="@+id/etRectangle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:hint="@string/aaaa"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/ivLine2"
+        app:layout_constraintTop_toBottomOf="@+id/issueDocument" />
+
+    <ImageView
+        android:id="@+id/ivLineDivider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRectangle1" />
+
+    <TextView
+        android:id="@+id/bornDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/bornDate"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLineDivider1" />
+
+    <EditText
+        android:id="@+id/etRectangle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:hint="@string/dd"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bornDate" />
+
+    <ImageView
+        android:id="@+id/ivLine3"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/etRectangle4"
+        app:layout_constraintStart_toEndOf="@+id/etRectangle4"
+        app:layout_constraintTop_toTopOf="@+id/etRectangle4" />
+
+    <EditText
+        android:id="@+id/etRectangle5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:hint="@string/mm"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/ivLine3"
+        app:layout_constraintTop_toBottomOf="@+id/bornDate" />
+
+    <ImageView
+        android:id="@+id/ivLine4"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/etRectangle5"
+        app:layout_constraintStart_toEndOf="@+id/etRectangle5"
+        app:layout_constraintTop_toTopOf="@+id/etRectangle5" />
+
+    <EditText
+        android:id="@+id/etRectangle6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:hint="@string/aaaa"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/ivLine2"
+        app:layout_constraintTop_toBottomOf="@+id/bornDate" />
+
+    <ImageView
+        android:id="@+id/ivLineDivider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRectangle4" />
+
+    <Button
+        android:id="@+id/btContinue"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:onClick="onClick"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLineDivider2" />
 </android.support.constraint.ConstraintLayout>
